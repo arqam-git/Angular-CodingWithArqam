@@ -8,6 +8,7 @@ import { AppendPreZerosPipe } from './pipes/append-pre-zeros.pipe';
 import { ScoreColorDirective } from './directives/score-color.directive';
 import { AppendPostDashesPipe } from './pipes/append-pre-post-dashes.pipe';
 import { Child1Component } from './child1/child1.component';
+import { RxjsCompComponent } from './rxjs-comp/rxjs-comp.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { Child1Component } from './child1/child1.component';
     ScoreColorDirective,
     AppendPostDashesPipe,
     Child1Component,
+    RxjsCompComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
