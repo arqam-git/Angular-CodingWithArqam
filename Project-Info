@@ -1,0 +1,19 @@
+This Project covers the following Angular topics:
+
+@ViewChild = angular 12
+@AccessChild = angular 13
+
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+  // Commands:
+
+  1.
+  Command to create a component with lazy loading module: ng generate module new-module-name --module parent-module --routing true --route path-string
+  Example: ng generate module dashboard --module app --routing true --route dashboard
+
+  2.

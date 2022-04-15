@@ -1,0 +1,20 @@
+.score-low {
+  color: red;
+}
+
+.score-medium {
+  color: blue;
+}
+
+.score-high {
+  color: green;
+}
+
+h1 {
+  color: brown;
+  /* text-decoration: underline; */
+}
+
+.heading-span {
+  text-decoration: underline;
+}

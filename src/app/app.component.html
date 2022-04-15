@@ -1,0 +1,95 @@
+<p style="color: red; text-decoration: underline;">NOTE: Things are printed on console to show the functionality of
+  things...</p>
+
+<h1 style="color: red;"> APP COMPONENT</h1>
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+<!-- Pipe & Custom Pipe -->
+<h1> {{'Custom Pipes' | appendPrePostDashes}} &#128151; </h1>
+<h3>{{title | uppercase}}</h3>
+<h3>{{age | appendPreZeros}}</h3>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+<!-- If we add ternary before toLowerCase in TS, then we need to add it before includes too -->
+<h1> {{'Use of Ternary Operator' | appendPrePostDashes}} </h1>
+<h3 *ngIf="obj.name?.toLowerCase()?.includes('li')">{{obj.name.toLowerCase()}}</h3>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+<!-- Custom Directive -->
+<h1> {{'Custom Directive' | appendPrePostDashes}} </h1>
+
+<div class="score">
+  <span class="lato-30-n-vw" appScoreColor [score]="10">score1: {{score1}}</span> <br>
+  <span class="lato-30-n-vw" appScoreColor [score]="20">score2: {{score2}}</span> <br>
+  <span class="lato-30-n-vw" appScoreColor [score]="30">score3: {{score3}}</span>
+</div>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+<!-- ng-templates in Angular  -->
+<h1> {{'ng-templates' | appendPrePostDashes}} </h1>
+
+<ng-template #messageTemplateFromAppComp>
+  <div>
+    <p>This is the message from App Component using ng-template</p>
+  </div>
+</ng-template>
+
+<!-- We cannnot use template without conditional directive -->
+<div *ngIf="age > 2000; else messageTemplateFromAppComp"></div>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+<!-- @ViewChild & @ViewChildren -->
+<h1> {{'@ViewChild & @ViewChildren' | appendPrePostDashes}} </h1>
+<!-- NOTE: 
+  ViewChild = You will see first paragraph only 
+  ViewChildren = You will see list of paragraphs
+-->
+<div #viewChildChildrenExample>
+  <p> paragraph#1: This is a paragraph. </p>
+</div>
+
+<div #viewChildChildrenExample>
+  <p> paragraph#2: This is a paragraph. </p>
+</div>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+<!-- Subscription on URL/Route -->
+<button (click)="updateRoute()"> Update Route </button> &nbsp;&nbsp;
+
+<!-- Subscription on Variable using Behavior Subject -->
+<button (click)="updateMyBehaviorSubj()"> Update MyBehaviorSubj</button>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+<!-- ng-templates in Angular  -->
+<h1> {{'Loading Login module & Passing a template to /login component' | appendPrePostDashes}} </h1>
+<app-login [messageTemplateFromAppComp]="messageTemplateFromAppComp">
+</app-login>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+<!-- Remaining:
+  1. [@fadeInAnimation] , initial template, working template
+  3. Subscribers
+  4. Lifecycle implementation specially ngDoCheck
+  5. List of things I do not understand yet:
+    -> Observable = also implemnted in this project.
+  6. ngModelChange VS ngModelValueChange
+  7. (ngModel) = view to TS, [ngModel] = TS to view, [(ngModel)] = two way
+  8. Angular don't have virtual DOM. Detect changes through change detection tree.
+-->
+<router-outlet></router-outlet>

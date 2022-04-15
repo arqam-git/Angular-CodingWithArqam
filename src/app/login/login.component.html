@@ -1,0 +1,22 @@
+<h1 style="color: red;"> lOGIN COMPONENT</h1>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+<h1> {{'Repeating a div for n-times (n is a number not an array of objects)' | appendPrePostDashes}} </h1>
+
+<!-- <div *ngFor="let n of numSequence(num); let i = index;">
+  <p>abc</p>
+</div> -->
+<div *ngFor="let _ of [].constructor(num)">
+  <p>abc</p>
+</div>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+<h1> {{'Using Template from App Component' | appendPrePostDashes}} </h1>
+
+
+<ng-container [ngTemplateOutlet]="messageTemplateFromAppComp"></ng-container>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
