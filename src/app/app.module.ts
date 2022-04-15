@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { AppendPreZerosPipe } from './pipes/append-pre-zeros.pipe';
 import { ScoreColorDirective } from './directives/score-color.directive';
 import { AppendPostDashesPipe } from './pipes/append-pre-post-dashes.pipe';
+import { Child1Component } from './child1/child1.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AppendPostDashesPipe } from './pipes/append-pre-post-dashes.pipe';
     AppendPreZerosPipe,
     ScoreColorDirective,
     AppendPostDashesPipe,
+    Child1Component,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

@@ -1,5 +1,10 @@
-<p style="color: red; text-decoration: underline;">NOTE: Things are printed on console to show the functionality of
+<span>✨</span>
+<p style="color: red; text-decoration: underline;"> NOTE: Things are printed on console to show the
+  functionality of
   things...</p>
+  <span>✨</span>
+  <p style="color: red; text-decoration: underline;"> NOTE: Components will load below the App and Login component...
+  </p>
 
 <h1 style="color: red;"> APP COMPONENT</h1>
 <!-- ------------------------------------------------------------------------------------------------------------ -->
@@ -38,6 +43,27 @@
 
 <!-- We cannnot use template without conditional directive -->
 <div *ngIf="age > 2000; else messageTemplateFromAppComp"></div>
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+<!-- ng-container in Angular  -->
+<h1> {{'ng-container' | appendPrePostDashes}} </h1>
+<ng-container *ngIf="age > 5">
+  <div>
+    <p>This is an example if ng-conainer.</p>
+  </div>
+</ng-container>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------ -->
+
+<!-- ng-content in Angular  -->
+<h1> {{'ng-content' | appendPrePostDashes}} </h1>
+
+<app-child1>
+  <p> This is an example of ng-content 1 passing from parent 'App' component.</p>
+  <p> This is an example of ng-content 2 passing from parent 'App' component.</p>
+</app-child1>
 
 <!-- ------------------------------------------------------------------------------------------------------------ -->
 
