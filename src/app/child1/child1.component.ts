@@ -10,6 +10,20 @@ export class Child1Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+
+  validationFunc(){
+    if (true) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  
+  decoratorFunc(){
+    alert('Decorator function called...!');
   }
 
 }
