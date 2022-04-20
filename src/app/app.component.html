@@ -101,9 +101,9 @@
 
 <!-- ng-templates in Angular  -->
 <h1> {{'Loading Login module & Passing a template to /login component' | appendPrePostDashes}} </h1>
-<app-login [messageTemplateFromAppComp]="messageTemplateFromAppComp">
+<app-login [messageTemplateFromAppComp]="messageTemplateFromAppComp"
+  (valueChangeFromLoginComp)='displayCounter($event)'>
 </app-login>
-
 <!-- ------------------------------------------------------------------------------------------------------------ -->
 <br><br><br><br><br>
 <br><br><br><br><br>

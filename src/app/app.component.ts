@@ -47,6 +47,8 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   myBehaviorSubj: BehaviorSubject<any> = new BehaviorSubject<any>(null);
   myObserverSubj = new Observable(this.sequenceSubscriber);
 
+  parentCount = 0;
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -144,5 +146,10 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     // unsubscribe function doesn't need to do anything in this
     // because values are delivered synchronously
     return { unsubscribe() {} };
+  }
+
+  displayCounter(count: any) {
+    this.parentCount = count;
+    alert('Counter value in parent Component: ' + this.parentCount);
   }
 }
