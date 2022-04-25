@@ -1,0 +1,30 @@
+<h1 style="color: red;"> User-Form COMPONENT</h1>
+
+<!-- Users List -->
+<h1> {{'User List using http GET req' | appendPrePostDashes}} </h1>
+
+<div class="users-list">
+  <div *ngFor="let user of users?.data">
+    <p> * email: {{user.email}} | name: {{user.first_name}} </p>
+  </div>
+</div>
+
+<br><br>
+<!-- Reactive Form -->
+<h1> {{'Create User using ReactiveForm' | appendPrePostDashes}} </h1>
+
+<form [formGroup]="userForm" (ngSubmit)="createUser(userForm)">
+  <div>
+    <label>
+      Name:
+      <input formControlName="name" placeholder="Your name">
+    </label>
+  </div>
+  <div>
+    <label>
+      Email:
+      <input formControlName="job" placeholder="Your email">
+    </label>
+  </div>
+  <button type="submit" [disabled]="userForm.invalid">Send</button>
+</form>

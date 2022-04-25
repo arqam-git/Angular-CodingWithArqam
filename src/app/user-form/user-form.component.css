@@ -1,0 +1,20 @@
+h1 {
+  color: brown;
+}
+
+.users-list {
+  height: 205px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 600px;
+  margin-left: 5%;
+  background-color: aliceblue;
+}
+
+.form {
+  margin-top: 5%;
+  margin-left: 5%;
+  background-color: blanchedalmond;
+  width: 600px;
+
+}

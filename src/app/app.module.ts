@@ -9,6 +9,9 @@ import { ScoreColorDirective } from './directives/score-color.directive';
 import { AppendPostDashesPipe } from './pipes/append-pre-post-dashes.pipe';
 import { Child1Component } from './child1/child1.component';
 import { RxjsCompComponent } from './rxjs-comp/rxjs-comp.component';
+import { UserFormComponent } from './user-form/user-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,8 +22,14 @@ import { RxjsCompComponent } from './rxjs-comp/rxjs-comp.component';
     AppendPostDashesPipe,
     Child1Component,
     RxjsCompComponent,
+    UserFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
